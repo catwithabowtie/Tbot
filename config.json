@@ -1,4 +1,5 @@
 {
     "token":"yourtokenhere",
-    "clientId":"youridhere"
+    "clientId":"youridhere",
+    "guildId":"yourguildidhere"
 }

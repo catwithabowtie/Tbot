@@ -2,11 +2,10 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const { token,clientId } = require('./config.json');
-if (token == "yourtokenhere") {
-	console.log("WARNING: Override your token at config.json for your bot work properly.")
-}
-if (clientId == "youridhere") {
-	console.log("WARNING: Override your userid at config.json for your bot work properly.")
+
+if (clientId == "youridhere" || token == "yourtokenhere") {
+	console.log("WARNING: Override your userid or token at config.json for your bot work properly.")
+	process.exit()
 }
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 

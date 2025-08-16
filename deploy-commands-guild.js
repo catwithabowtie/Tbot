@@ -2,7 +2,10 @@ const { REST, Routes } = require('discord.js');
 const { clientId, guildId, token } = require('./config.json');
 const fs = require('node:fs');
 const path = require('node:path');
-
+if (clientId == "youridhere" || token == "yourtokenhere" || guildId == "yourguildidhere") {
+	console.log("WARNING: Override your userid or token or guildid at config.json for your bot work properly.")
+	process.exit()
+}
 const commands = [];
 // Grab all the command folders from the commands directory you created earlier
 const foldersPath = path.join(__dirname, 'commands');
